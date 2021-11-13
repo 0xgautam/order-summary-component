@@ -1,0 +1,173 @@
+:root {
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  background-color: var(--pale-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bg_desktop {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.bg_mobile {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  display: none;
+}
+
+.card {
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.25);
+  width: 25rem;
+  background-color: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  margin: 1rem 0;
+}
+
+.card_hero {
+  width: 100%;
+}
+
+.card_heading {
+  color: var(--dark-blue);
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin: 2rem 0 0rem 0;
+  text-align: center;
+}
+
+.card_info {
+  color: var(--desaturated-blue);
+  text-align: center;
+  padding: 0.5rem 2rem;
+}
+
+.card_pricing {
+  background-color: var(--very-pale-blue);
+  width: 80%;
+  margin: 1rem auto;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 1rem;
+}
+
+.pricing_text {
+  display: flex;
+  align-items: center;
+}
+
+.pricing_text img {
+  margin-right: 0.5rem;
+}
+
+.pricing_text div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+}
+
+.pricing_text h4 {
+  color: var(--dark-blue);
+}
+
+.card_link {
+  color: var(--bright-blue);
+  transition: all 0.3s ease 0s;
+}
+
+.pricing_text p {
+  color: var(--desaturated-blue);
+}
+
+.card_btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: 2rem 0 1rem 0;
+}
+
+.btn_pay {
+  background-color: var(--bright-blue);
+  box-shadow: 0px 8px 15px rgba(0, 0, 255, 0.25);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  border: none;
+  color: white;
+  width: 80%;
+  padding: 0.8rem;
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.btn_cancel {
+  background-color: transparent;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  border: none;
+  color: var(--desaturated-blue);
+  width: 80%;
+  padding: 0.8rem;
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-top: 1rem;
+}
+
+.btn_pay:hover {
+  background-color: hsl(245, 100%, 68%);
+  transform: scale(1.05);
+}
+
+.btn_cancel:hover {
+  transform: scale(1.05);
+  color: var(--dark-blue);
+}
+
+.card_link:hover {
+  text-decoration: none;
+  transform: scale(1.05);
+}
+
+/* responsive styles for mobile width */
+@media (max-width: 375px) {
+  .card {
+    width: 18rem;
+  }
+
+  .card_pricing,
+  .btn_pay,
+  .btn_cancel {
+    width: 90%;
+  }
+
+  .card_info {
+    padding: 1rem;
+  }
+}
