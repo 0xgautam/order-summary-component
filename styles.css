@@ -170,4 +170,12 @@ body {
   .card_info {
     padding: 1rem;
   }
+  
+  .bg_desktop {
+    display : none
+  }
+  
+  .bg_mobile {
+    display : block
+  }
 }
